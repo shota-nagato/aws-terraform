@@ -1,0 +1,47 @@
+# .gitignore
+
+# Terraformの一時ファイルやディレクトリを無視する
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+!terraform.tfvars
+.terraformrc
+terraform.rc
+
+# その他の一般的な無視ファイル
+.DS_Store
+*.log
+*.bak
+
+# Lambda関連のファイルを無視する
+**/node_modules/
+*.zip
+modules/async_processing/function.zip
+
+# 環境固有の設定ファイルを無視する（必要に応じて）
+# environments/**/terraform.tfvars
+
+# IDEやエディタの設定ファイルを無視する
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS生成ファイルを無視する
+Thumbs.db
+
+# AWS CLIの設定ファイルを無視する（セキュリティのため）
+.aws/
+
+# スクリプトの一時ファイルや出力を無視する
+scripts/*.log
+scripts/*.out
+
+# Terraformのプランファイルを無視する
+**/tfplan
+
+# その他のプロジェクト固有の一時ファイルや出力ディレクトリ
+/tmp/
+/output/
